@@ -1,0 +1,60 @@
+{
+  "name": "node-api-boilerplate",
+  "version": "1.1.1",
+  "description": "A boilerplate for web APIs using Node",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "start": "node cluster.js",
+    "dev": "cross-env NODE_PATH=. NODE_ENV=development nodemon",
+    "test": "npm run test:all",
+    "test:all": "npm run test:unit && npm run test:features",
+    "test:unit": "cross-env NODE_PATH=. NODE_ENV=test mocha --opts test/mocha.opts.unit",
+    "test:features": "cross-env NODE_PATH=. NODE_ENV=test mocha --opts test/mocha.opts.features",
+    "coverage": "cross-env NODE_PATH=. NODE_ENV=test nyc mocha --opts test/mocha.opts.unit",
+    "lint": "eslint {src,test,config}/**/*.js",
+    "sequelize": "cross-env NODE_PATH=. sequelize",
+    "console": "cross-env NODE_PATH=. node src/interfaces/console/index.js",
+    "heroku-postbuild": "NODE_ENV=production NODE_PATH=. sequelize db:migrate --url=$DATABASE_URL",
+    "pm2": "pm2"
+  },
+  "repository": {},
+  "author": "Talysson <talyssonoc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "awilix": "^4.2.5",
+    "awilix-express": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "express-status-monitor": "^1.2.10",
+    "http-status": "^1.4.2",
+    "log4js": "^6.1.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.0.2",
+    "pm2": "^4.2.3",
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1",
+    "structure": "^2.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-change": "^2.1.2",
+    "dirty-chai": "^2.0.1",
+    "factory-girl": "^5.0.4",
+    "listr": "^0.14.3",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.3",
+    "nyc": "^15.0.1",
+    "supertest": "^4.0.2"
+  }
+}
