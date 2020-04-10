@@ -1,11 +1,11 @@
 {
-  "name": "node-api-boilerplate",
-  "version": "1.1.1",
-  "description": "A boilerplate for web APIs using Node",
+  "name": "flatty",
+  "version": "1.0.0",
+  "description": "An API for managing house share business logic",
   "main": "index.js",
   "private": true,
   "engines": {
-    "node": ">=7.6.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "start": "node cluster.js",
@@ -22,7 +22,7 @@
     "pm2": "pm2"
   },
   "repository": {},
-  "author": "Talysson <talyssonoc@gmail.com>",
+  "author": "Lucas <lucas.romao.silva@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "awilix": "^4.2.5",
@@ -43,18 +43,18 @@
     "pm2": "^4.2.3",
     "sequelize": "^5.21.5",
     "sequelize-cli": "^5.5.1",
-    "structure": "^2.0.0",
-    "swagger-ui-express": "^4.1.4"
+    "swagger-ui-express": "^4.1.4",
+    "yarn-check": "^0.0.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-change": "^2.1.2",
     "dirty-chai": "^2.0.1",
     "factory-girl": "^5.0.4",
-    "listr": "^0.14.3",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.3",
     "nyc": "^15.0.1",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "supertest-as-promised": "^4.0.2"
   }
 }
